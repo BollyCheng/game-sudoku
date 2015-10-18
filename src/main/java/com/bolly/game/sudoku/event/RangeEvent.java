@@ -6,7 +6,7 @@ import com.bolly.game.sudoku.core.Range;
 import java.util.EventObject;
 
 /**
- * Created by Administrator on 2015/10/15.
+ * Created by Bolly on 2015/10/15.
  */
 public class RangeEvent extends EventObject {
 

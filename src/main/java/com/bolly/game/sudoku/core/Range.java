@@ -7,14 +7,22 @@ import com.bolly.game.sudoku.listener.CellListener;
 import java.util.Vector;
 
 /**
- * Created by Administrator on 2015/10/15.
+ * 一个数独的区间
+ * 在一个完整数独区间中只能而且必须包含1~9这几个值。
+ *
+ * 在本算法中，加入了已使用的值和未使用的值。当自己所管辖的单元格的值
+ *
+ * 按如下方式理解：
+ * 在标准的数独玩法中，这个区间通常为一行或者一列或者3*3的范围格。
+ *
+ * Created by Bolly on 2015/10/15.
  */
 public class Range implements CellListener {
 
     private final String name;
     private Vector<Cell> cells;
-    private Vector<CellValue> usedValues;//�Ѿ�ʹ�õ�ֵ
-    private Vector<CellValue> restValues;//ʣ�µ�ֵ
+    private Vector<CellValue> usedValues;//使用的值
+    private Vector<CellValue> restValues;//未使用的值
 
     public Range(final String name) {
         this.name = name;
@@ -57,7 +65,7 @@ public class Range implements CellListener {
     }
 
     /**
-     * Range�е�Ԫ��Ψһֵ�ж�
+     * 检查Range的所有单元格中是否存在唯一值。如果存在，
      */
     public void uniqueCellCalulate() {
         Cell uniqueCell;
@@ -83,10 +91,6 @@ public class Range implements CellListener {
                 }
             }
         }
-    }
-
-    public void clearUsedValue() {
-
     }
 
     @Override

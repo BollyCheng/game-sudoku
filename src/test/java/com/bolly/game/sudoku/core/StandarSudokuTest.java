@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * Created by Administrator on 2015/10/15.
+ * Created by Bolly on 2015/10/15.
  */
 public class StandarSudokuTest {
 

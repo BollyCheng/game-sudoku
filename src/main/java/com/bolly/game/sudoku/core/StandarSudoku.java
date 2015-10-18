@@ -2,7 +2,9 @@ package com.bolly.game.sudoku.core;
 
 /**
  * 标准数独
- * Created by Administrator on 2015/10/14.
+ * 9*9单元格。
+ *
+ * Created by Bolly on 2015/10/14.
  */
 public class StandarSudoku extends Sudoku {
 

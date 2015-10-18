@@ -4,7 +4,7 @@ import java.util.Vector;
 
 /**
  * 抽象的数独
- * Created by Administrator on 2015/10/14.
+ * Created by Bolly on 2015/10/14.
  */
 public abstract class Sudoku {
 
@@ -30,6 +30,9 @@ public abstract class Sudoku {
         }
     }
 
+    /**
+     * 初始化数独的各个Range。根据数独不同而不同。
+     */
     protected abstract void initRanges();
 
     private int getSuccessCellCount() {
@@ -61,7 +64,6 @@ public abstract class Sudoku {
         }
         successCellCount = getSuccessCellCount();
         System.out.println(String.format("-------- Second Calculate:(%d/%d) %f%%", successCellCount, totalCount, (double) successCellCount * 100 / totalCount));
-        //第三轮
 
     }
 

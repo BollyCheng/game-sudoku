@@ -7,7 +7,9 @@ import com.bolly.game.sudoku.listener.RangeListener;
 import java.util.Vector;
 
 /**
- * Created by Administrator on 2015/10/14.
+ * 单元格。
+ * 每个单元格只能有一个正确值，在获得正确值之前会有多个备选值
+ * Created by Bolly on 2015/10/14.
  */
 public class Cell implements RangeListener {
 
@@ -76,12 +78,12 @@ public class Cell implements RangeListener {
     public String toString() {
         StringBuilder strBuilder = new StringBuilder();
         strBuilder.append("Cell{");
-        strBuilder.append("[" + rowIndex + "," + columnIndex + "] ");
+        strBuilder.append(String.format("[%s,%s]",rowIndex,columnIndex));
         strBuilder.append(value);
         if (!whiteValues.isEmpty()) {
             strBuilder.append(" [");
             for (CellValue value : whiteValues) {
-                strBuilder.append(value + ",");
+                strBuilder.append(value);
             }
             strBuilder.deleteCharAt(strBuilder.length() - 1);
             strBuilder.append("]");
